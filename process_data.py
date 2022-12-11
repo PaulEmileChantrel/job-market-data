@@ -1,9 +1,11 @@
 import pandas as pd
 import json
+import streamlit as st
 
 
 # Methode to process a df given the csv file_name
-# This will return mutiple df 
+# This will return mutiple df
+@st.cache
 def process_data(file_name='data_analyst_toronto.csv'):
     # Loading the dataframe file
     df = pd.read_csv(file_name)

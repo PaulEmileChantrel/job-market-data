@@ -3,8 +3,9 @@ import json
 import streamlit as st
 
 def preformat(file_name):
-    df = pd.read_csv(file_name,index_col=[0])
+    df = pd.read_csv(file_name)
     # We drop the job duplicates
+    print(df.columns)
     df = df.drop_duplicates(subset=['description','title','company_name','via']).reset_index(drop=True)
     print(df.shape[0])
 
@@ -23,7 +24,7 @@ def preformat(file_name):
     df.to_csv(file_name,index=False)
     return df
 
-#preformat('data_analyst_toronto.csv')
+preformat('data_analyst_toronto.csv')
 
 
 # Methode to process a df given the csv file_name

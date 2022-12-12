@@ -42,7 +42,7 @@ via_df = via_df[:n2]
 job_title_df = job_title_df[:n3]
 
 ## -- Page --
-st.title(':bar_chart: Job Market for Data Analys in Toronto')
+st.title(':bar_chart: Job Market for Data Analyst in Toronto')
 st.markdown("##")
 
 

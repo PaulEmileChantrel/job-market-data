@@ -21,6 +21,8 @@ def download_data(q):
             "q": q,
             "hl": "en",
             "api_key": config.ApiKey,
+            "chips":"date_posted:today",
+            "lrad":"50"
             }
         if page !=0: #stat = 0 does not work?
             params["start"]=page
@@ -59,7 +61,7 @@ def download_data(q):
 
 download_data('data analyst toronto')
 #download_data('data scientist toronto')
-#download_data('software developer toronto')
+# download_data('software developer toronto')
 #download_data('python developer toronto')
 #download_data('python toronto')
-download_data('blockchain toronto')
+# download_data('blockchain toronto')
